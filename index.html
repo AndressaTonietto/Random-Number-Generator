@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random number generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #006666;
+        }
+        .btn {
+            height: 400px;
+            width: 600px;
+            background-color: #555555;
+            border-radius: 50px;
+            border: none;
+            color: #cacaca;
+            outline: none;
+            text-align: center;
+            font-size: 300px;
+            display: block;
+            margin: 50px auto;
+        }
+        .btn:hover {
+            box-shadow: 0 30px 45px 0 rgba(0,0,0,0.24), 0 50px 150px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">click</button>
+    <script>
+
+        const btn = document.querySelector(".btn");
+        btn.addEventListener("click", () => {
+            result = Math.random()*100 + 1;
+            result = parseInt(result);
+            updateBtn(result);
+        })
+
+        const updateBtn = (newValue) => {
+            btn.innerHTML = newValue;
+        }
+
+    </script>
+</body>
+</html>

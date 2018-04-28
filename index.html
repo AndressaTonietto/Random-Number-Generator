@@ -11,7 +11,9 @@
         }
         .btn {
             height: 400px;
+            max-height: 100%;
             width: 600px;
+            max-width: 100%;
             background-color: #555555;
             border-radius: 50px;
             border: none;
@@ -21,9 +23,13 @@
             font-size: 300px;
             display: block;
             margin: 50px auto;
-        }
-        .btn:hover {
             box-shadow: 0 30px 45px 0 rgba(0,0,0,0.24), 0 50px 150px 0 rgba(0,0,0,0.19);
+        }
+
+        @media (max-width: 600px) {
+            .btn {
+                border: 10px solid #F0DA5E;
+             }
         }
     </style>
 </head>
